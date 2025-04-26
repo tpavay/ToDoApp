@@ -12,7 +12,7 @@ import SwiftData
 class ToDoItem {
     var id = UUID().uuidString
     var name: String
-    var desc: String
+    var desc: String?
     var dueDate: Date
     var isCompleted: Bool
     
@@ -22,5 +22,12 @@ class ToDoItem {
         self.desc = desc
         self.dueDate = dueDate
         self.isCompleted = isCompleted
+    }
+    
+    init(item: ToDoItemDTO) {
+        name = item.name
+        desc = item.desc
+        dueDate = item.dueDate
+        isCompleted = item.isCompleted
     }
 }

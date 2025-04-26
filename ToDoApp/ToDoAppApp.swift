@@ -5,6 +5,7 @@
 //  Created by Tyler Pavay on 4/26/25.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +14,6 @@ struct ToDoAppApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: ToDoItem.self)
     }
 }
